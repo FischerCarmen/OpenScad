@@ -1,5 +1,5 @@
-height = 220;
-width = height;
-plate_thickness = 5;
+door_height = 220;
+door_width = door_height;
+thickness = 5;
 
 $fn=32;
