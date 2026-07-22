@@ -7,7 +7,7 @@ module inni (height=(door_height/2)+tollerance, width=frame_width,thickness=fram
     attachable(anchor, spin, orient, size=[width+height,width+height,door_thickness+thickness]){
         diff()
         translate([width/2,(height)/2,door_thickness/2])
-        cuboid([height+2,width,thickness])
+        cuboid([height,width,thickness])
 
         {
             tag("remove")
@@ -32,7 +32,7 @@ module inni (height=(door_height/2)+tollerance, width=frame_width,thickness=fram
             attach(FRONT,TOP)
             recolor("darkorange")
             translate([-thickness/2, -(door_thickness+thickness)/2, -thickness])
-            cuboid([height+thickness+2,door_thickness,thickness]){
+            cuboid([height+thickness,door_thickness,thickness]){
                 tag("remove")
                 attach(FRONT, BOTTOM, inside=true)
                 dovetail("female", width=15, height=8, slide=thickness);
@@ -80,5 +80,5 @@ module outi(height=door_height/2+tollerance, width=frame_width,thickness=frame_t
     }
 }
 
-//inni();
-outi();
+inni();
+//outi();
